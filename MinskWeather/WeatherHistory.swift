@@ -71,17 +71,18 @@ class WeatherHistory {
                 maxTemp = max
             }
         })
-        if maxTemp - currentTemp > currentTemp - minTemp {
+        
+        if maxTemp - currentTemp >= currentTemp - minTemp {
 
-            angle = ((CGFloat(2 * currentTemp - maxTemp - minTemp)) / (CGFloat(maxTemp - minTemp))) *  CGFloat(M_PI/2)
+            angle = (CGFloat(2 * currentTemp - maxTemp - minTemp) / (CGFloat(maxTemp - minTemp))) *  CGFloat(M_PI/1.65)
             let rightDuration : Double = ((Double(maxTemp + minTemp - 2 * currentTemp)) / (Double(maxTemp - minTemp))) * 2
-            duration = (2 - rightDuration, rightDuration)
+            duration = (2.5 - rightDuration, rightDuration)
             
         }
         else {
-            angle = ((CGFloat(maxTemp + minTemp - 2 * currentTemp)) / (CGFloat(maxTemp - minTemp))) *  CGFloat(M_PI/2)
-            let leftDuration = ((Double(maxTemp + minTemp - 2 * currentTemp)) / (Double(maxTemp - minTemp))) * 2
-            duration = (leftDuration, 2 - leftDuration)
+            angle = (CGFloat(2 * currentTemp - maxTemp - minTemp) / (CGFloat(maxTemp - minTemp))) *  CGFloat(M_PI/1.65)
+            let leftDuration : Double = ((Double(2 * currentTemp - maxTemp - minTemp)) / (Double(maxTemp - minTemp))) * 2
+            duration = (leftDuration, 2.5 - leftDuration)
         }
     }
     

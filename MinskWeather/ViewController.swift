@@ -33,9 +33,9 @@ class ViewController: UIViewController {
         func isAngleInState(angle: CGFloat) -> (Bool){
             switch self {
             case .UpToRight:
-                return angle >= 0
+                return angle > 0
             case .RightToUp:
-                return angle >= 0
+                return angle > 0
             case .UpToLeft:
                 return angle <= 0
             case .LeftToUp:
@@ -143,21 +143,34 @@ class ViewController: UIViewController {
             self.ghostView.alpha = 0
             })
             { _ in
-                
-                let parameters = self.stateAnimation.getParameters()
-                let duration = self.stateAnimation.isNeedRightDuration() ? WeatherHistory.shared.duration.left : WeatherHistory.shared.duration.right
-                let options = parameters.options == UIViewAnimationOptions.curveEaseOut ? UIViewAnimationOptions.curveEaseInOut: parameters.options
-                
-                UIView.animate(withDuration: duration, delay: 0.5, options: options, animations:
-                    { [unowned self] in
+                if WeatherHistory.shared.angle != 0 {
                     
-                    self.arrowView.layer.transform = CATransform3DMakeRotation(parameters.angle, 0, 0, 1)
-                    }, completion: { _ in
-                        self.isAnimate = true
-                        self.startAnimating()
-                        WeatherHistory.shared.loadHistory(completion: self.completion)
-                })
-                
+                    var duration : Double
+                    if WeatherHistory.shared.angle > 0 {
+                        self.stateAnimation = .RightToUp
+                        duration = WeatherHistory.shared.duration.left
+                    }
+                    else {
+                        self.stateAnimation = .LeftToUp
+                        duration = WeatherHistory.shared.duration.right
+                    }
+                    
+                    UIView.animate(withDuration: duration, delay: 0.5, options: .curveEaseIn, animations:
+                        { [unowned self] in
+                            
+                            self.arrowView.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1)
+                        }, completion: { _ in
+                            self.isAnimate = true
+                            self.startAnimating()
+                            WeatherHistory.shared.loadHistory(completion: self.completion)
+                    })
+                    
+                }
+                else {
+                    self.isAnimate = true
+                    self.startAnimating()
+                    WeatherHistory.shared.loadHistory(completion: self.completion)
+                }
             }
     }
     
@@ -174,29 +187,5 @@ class ViewController: UIViewController {
             present(alertController, animated: true, completion: nil)
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
