@@ -10,17 +10,14 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class WeatherHistory {
+class Network {
     
-    static let shared = WeatherHistory()
+    static let shared = Network()
+    
+    var data = DataNetwork()
+    
     private var alamofireManager : SessionManager?
     
-    var minTemp : Int16 = 0
-    var maxTemp : Int16 = 0
-    var currentTemp : Int16 = 0
-    
-    var angle = CGFloat()
-    var duration : (left: Double, right: Double) = (0, 0)
     init() {
         let configuration = URLSessionConfiguration.background(withIdentifier: "background")
         configuration.timeoutIntervalForRequest = 5
@@ -54,36 +51,18 @@ class WeatherHistory {
     }
     
     func parseCurrentJson(_ json: JSON) {
-        currentTemp = json["main"]["temp"].int16!
-        minTemp = currentTemp
-        maxTemp = currentTemp
+        
+        data.current = json["main"]["temp"].int!
     }
     
     func parseRangeJson(_ json: JSON) {
+        
         let list = json["list"].array
         list?.forEach({ element in
-            let min = element["temp"]["min"].int16!
-            let max = element["temp"]["max"].int16!
-            if min < minTemp {
-                minTemp = min
-            }
-            if max > maxTemp {
-                maxTemp = max
-            }
+            
+            data.all.append((element["temp"]["min"].int!, element["temp"]["max"].int!))
         })
         
-        if maxTemp - currentTemp >= currentTemp - minTemp {
-
-            angle = (CGFloat(2 * currentTemp - maxTemp - minTemp) / (CGFloat(maxTemp - minTemp))) *  CGFloat(M_PI/1.65)
-            let rightDuration : Double = ((Double(maxTemp + minTemp - 2 * currentTemp)) / (Double(maxTemp - minTemp))) * 2
-            duration = (2.5 - rightDuration, rightDuration)
-            
-        }
-        else {
-            angle = (CGFloat(2 * currentTemp - maxTemp - minTemp) / (CGFloat(maxTemp - minTemp))) *  CGFloat(M_PI/1.65)
-            let leftDuration : Double = ((Double(2 * currentTemp - maxTemp - minTemp)) / (Double(maxTemp - minTemp))) * 2
-            duration = (leftDuration, 2.5 - leftDuration)
-        }
     }
     
 }
