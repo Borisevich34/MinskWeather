@@ -10,9 +10,6 @@ import UIKit
 
 class ArrowView: UIView {
     
-    @IBInspectable var arrowColor: UIColor = UIColor.gray
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -26,22 +23,15 @@ class ArrowView: UIView {
     override func draw(_ rect: CGRect) {
         
         let context : CGContext = UIGraphicsGetCurrentContext()!
-       
-        context.beginPath()
-        context.addEllipse(in: CGRect(x: bounds.width/2 - 15, y: 0, width: 30, height: 30))
-        context.move(to: CGPoint(x: bounds.width/2, y: 38.3))
-        context.addLine(to: CGPoint(x: bounds.width/2 - 13.3, y: 22.3))
-        context.addLine(to: CGPoint(x: bounds.width/2 + 13.3, y: 22.3))
-        context.closePath()
-        
-        context.setFillColor(arrowColor.cgColor)
-        context.fillPath()
         
         context.beginPath()
-        context.addEllipse(in: CGRect(x: bounds.width/2 - 6, y: 9, width: 12, height: 12))
+        context.move(to: CGPoint(x: bounds.width/2 + 0.5, y: 0 + 0.5))
+        context.addLine(to: CGPoint(x: 0 + 0.5, y: bounds.height/1.8 + 0.5))
+        context.addLine(to: CGPoint(x: bounds.width/2 + 0.5, y: bounds.height/2 + 0.5))
+        context.addLine(to: CGPoint(x: bounds.width + 0.5, y: bounds.height/1.8 + 0.5))
+
         context.closePath()
-        
-        context.setFillColor(UIColor.lightGray.cgColor)
+        context.setFillColor(UIColor.gray.cgColor)
         context.fillPath()
     }
 }

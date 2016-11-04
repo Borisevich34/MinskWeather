@@ -8,42 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		1BDD4A3825363BF055A5F92E /* Pods_MinskWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD1AE81C083BE20F4A54524 /* Pods_MinskWeather.framework */; };
-		E97267C21DCB2B93000E9993 /* DataNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97267C11DCB2B93000E9993 /* DataNetwork.swift */; };
-		E97267C41DCB2E5B000E9993 /* StateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97267C31DCB2E5B000E9993 /* StateAnimation.swift */; };
-		E97D18041DCCC84B0043D832 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D18031DCCC84B0043D832 /* CircleView.swift */; };
-		E97D18061DCCE1CD0043D832 /* ArcForCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D18051DCCE1CD0043D832 /* ArcForCircleView.swift */; };
 		E99B748E1DC157A300660E18 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B748D1DC157A300660E18 /* ArrowView.swift */; };
-		E9A0F4B51DCA1541007E658B /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0F4B41DCA1541007E658B /* ArcView.swift */; };
-		E9A0F4B71DCA2199007E658B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0F4B61DCA2199007E658B /* GradientView.swift */; };
 		E9AC07071DBCEE2300CACDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC07061DBCEE2300CACDEB /* AppDelegate.swift */; };
-		E9AC07091DBCEE2300CACDEB /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC07081DBCEE2300CACDEB /* MainController.swift */; };
+		E9AC07091DBCEE2300CACDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC07081DBCEE2300CACDEB /* ViewController.swift */; };
 		E9AC070C1DBCEE2300CACDEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AC070A1DBCEE2300CACDEB /* Main.storyboard */; };
 		E9AC070E1DBCEE2300CACDEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AC070D1DBCEE2300CACDEB /* Assets.xcassets */; };
 		E9AC07111DBCEE2300CACDEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AC070F1DBCEE2300CACDEB /* LaunchScreen.storyboard */; };
 		E9AC071B1DBCEF3C00CACDEB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E9AC071A1DBCEF3C00CACDEB /* Podfile */; };
-		E9AC071D1DBCF06000CACDEB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC071C1DBCF06000CACDEB /* Network.swift */; };
+		E9AC071D1DBCF06000CACDEB /* WeatherHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC071C1DBCF06000CACDEB /* WeatherHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		914210C2BEEB8152B942DF8A /* Pods-MinskWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinskWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MinskWeather/Pods-MinskWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		ABD1AE81C083BE20F4A54524 /* Pods_MinskWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinskWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5F56F93A9C147362A8BAEF /* Pods-MinskWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinskWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinskWeather/Pods-MinskWeather.release.xcconfig"; sourceTree = "<group>"; };
-		E97267C11DCB2B93000E9993 /* DataNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataNetwork.swift; sourceTree = "<group>"; };
-		E97267C31DCB2E5B000E9993 /* StateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateAnimation.swift; sourceTree = "<group>"; };
-		E97D18031DCCC84B0043D832 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		E97D18051DCCE1CD0043D832 /* ArcForCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcForCircleView.swift; sourceTree = "<group>"; };
 		E99B748D1DC157A300660E18 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
-		E9A0F4B41DCA1541007E658B /* ArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
-		E9A0F4B61DCA2199007E658B /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E9AC07031DBCEE2300CACDEB /* MinskWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinskWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9AC07061DBCEE2300CACDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9AC07081DBCEE2300CACDEB /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		E9AC07081DBCEE2300CACDEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9AC070B1DBCEE2300CACDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9AC070D1DBCEE2300CACDEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9AC07101DBCEE2300CACDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9AC07121DBCEE2300CACDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9AC071A1DBCEF3C00CACDEB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E9AC071C1DBCF06000CACDEB /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		E9AC071C1DBCF06000CACDEB /* WeatherHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,15 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				E9AC07061DBCEE2300CACDEB /* AppDelegate.swift */,
-				E9AC07081DBCEE2300CACDEB /* MainController.swift */,
-				E97267C31DCB2E5B000E9993 /* StateAnimation.swift */,
-				E9AC071C1DBCF06000CACDEB /* Network.swift */,
-				E97267C11DCB2B93000E9993 /* DataNetwork.swift */,
-				E9A0F4B41DCA1541007E658B /* ArcView.swift */,
+				E9AC07081DBCEE2300CACDEB /* ViewController.swift */,
+				E9AC071C1DBCF06000CACDEB /* WeatherHistory.swift */,
 				E99B748D1DC157A300660E18 /* ArrowView.swift */,
-				E9A0F4B61DCA2199007E658B /* GradientView.swift */,
-				E97D18031DCCC84B0043D832 /* CircleView.swift */,
-				E97D18051DCCE1CD0043D832 /* ArcForCircleView.swift */,
 				E9AC070A1DBCEE2300CACDEB /* Main.storyboard */,
 				E9AC070D1DBCEE2300CACDEB /* Assets.xcassets */,
 				E9AC070F1DBCEE2300CACDEB /* LaunchScreen.storyboard */,
@@ -240,15 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E97D18041DCCC84B0043D832 /* CircleView.swift in Sources */,
-				E97267C41DCB2E5B000E9993 /* StateAnimation.swift in Sources */,
 				E99B748E1DC157A300660E18 /* ArrowView.swift in Sources */,
-				E97267C21DCB2B93000E9993 /* DataNetwork.swift in Sources */,
-				E9A0F4B51DCA1541007E658B /* ArcView.swift in Sources */,
-				E97D18061DCCE1CD0043D832 /* ArcForCircleView.swift in Sources */,
-				E9A0F4B71DCA2199007E658B /* GradientView.swift in Sources */,
-				E9AC07091DBCEE2300CACDEB /* MainController.swift in Sources */,
-				E9AC071D1DBCF06000CACDEB /* Network.swift in Sources */,
+				E9AC07091DBCEE2300CACDEB /* ViewController.swift in Sources */,
+				E9AC071D1DBCF06000CACDEB /* WeatherHistory.swift in Sources */,
 				E9AC07071DBCEE2300CACDEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
